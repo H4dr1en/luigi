@@ -33,7 +33,7 @@ PARSERS = {
 }
 
 # select parser via env var
-DEFAULT_PARSER = 'cfg'
+DEFAULT_PARSER = 'toml'
 PARSER = os.environ.get('LUIGI_CONFIG_PARSER', DEFAULT_PARSER)
 if PARSER not in PARSERS:
     warnings.warn("Invalid parser: {parser}".format(parser=PARSER))
